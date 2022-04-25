@@ -3,7 +3,7 @@ import Gold from "../../assets/images/gold.png";
 
 const Search = () => {
   return (
-    <div className="search">
+    <div name="travel" className="search">
       <div className="container">
         <div className="left">
           <h2>LUXURAY INCLUDED VACATIONS FOR TWO PEOPLE</h2>
@@ -38,7 +38,38 @@ const Search = () => {
             </div>
           </div>
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <div className="promo">
+            <h4 className="save">GET AN ADDITIONAL 7% OFF</h4>
+            <p className="timer">12 HOURS LEFT!</p>
+            <p className="offers">VIEW ALL CURRENT OFFERS</p>
+          </div>
+          <form>
+            <div className="input-wrap">
+              <label>Destinations</label>
+              <select>
+                <option>Grande Antigua</option>
+                <option>Emerade Bay</option>
+                <option>Key West</option>
+                <option>Borabora</option>
+                <option>Maldives</option>
+                <option>Japan</option>
+                <option>Borabora</option>
+              </select>
+            </div>
+            <div className="date">
+              <div className="input-wrap">
+                <label>Check-In</label>
+                <input type="date" />
+              </div>
+              <div className="input-wrap">
+                <label>Check-Out</label>
+                <input type="date" />
+              </div>
+            </div>
+            <button>Rates & Availibilities</button>
+          </form>
+        </div>
       </div>
     </div>
   );

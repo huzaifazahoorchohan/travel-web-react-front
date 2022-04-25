@@ -11,6 +11,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -18,16 +19,26 @@ const Navbar = () => {
     setNav(!nav);
   };
   return (
-    <nav className={nav ? "navbar navbar-bg" : "navbar"}>
+    <nav name="home" className={nav ? "navbar navbar-bg" : "navbar"}>
       <div className={nav ? "logo darkLogo" : "logo"}>
         <h2>BEACHES.</h2>
       </div>
       <ul className="nav-menu">
-        <li>Home</li>
-        <li>Destinations</li>
-        <li>Travel</li>
-        <li>Book</li>
-        <li>Views</li>
+        <Link smooth={true} duration={500} to="home">
+          <li>Home</li>
+        </Link>
+        <Link smooth={true} duration={500} to="destinations">
+          <li>Destinations</li>
+        </Link>
+        <Link smooth={true} duration={500} to="travel">
+          <li>Travel</li>
+        </Link>
+        <Link smooth={true} duration={500} to="book">
+          <li>Book</li>
+        </Link>
+        <Link smooth={true} duration={500} to="views">
+          <li>Views</li>
+        </Link>
       </ul>
       <div className="nav-icons">
         <BiSearch className="icon" style={{ marginRight: "1rem" }} />
@@ -49,11 +60,21 @@ const Navbar = () => {
 
       <div className={nav ? "mobile-menu active" : "mobile-menu"}>
         <ul className="mobile-nav">
-          <li>Home</li>
-          <li>Destinations</li>
-          <li>Travel</li>
-          <li>Book</li>
-          <li>Views</li>
+          <Link smooth={true} duration={500} to="home">
+            <li>Home</li>
+          </Link>
+          <Link smooth={true} duration={500} to="destinations">
+            <li>Destinations</li>
+          </Link>
+          <Link smooth={true} duration={500} to="travel">
+            <li>Travel</li>
+          </Link>
+          <Link smooth={true} duration={500} to="book">
+            <li>Book</li>
+          </Link>
+          <Link smooth={true} duration={500} to="views">
+            <li>Views</li>
+          </Link>
         </ul>
         <div className="mobile-menu-bottom">
           <div className="menu-icons">
